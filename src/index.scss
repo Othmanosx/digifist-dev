@@ -1,3 +1,8 @@
+$black: #000000;
+$white: #ffffff;
+$gray: #666666;
+$breakpoint: 1000px;
+
 @font-face {
   font-family: Avenir;
   src: url(./assets/Avenir.ttc);
@@ -30,13 +35,13 @@ h2,
 h3,
 h4 {
   font-family: "ITC Avant Garde Gothic Pro Bold";
-  color: white;
+  color: $white;
 }
 p,
 span {
   font-family: "Avenir";
   font-size: 0.8rem;
-  color: white;
+  color: $white;
 }
 .bg-container {
   position: relative;
@@ -54,13 +59,19 @@ span {
   opacity: 0.5;
   bottom: 4px;
   position: absolute;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 78.65%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, $black 78.65%);
 }
 .items-container {
   margin-top: -270px;
 }
 .header {
-  padding: 16px 24px;
+  padding: 16px 24px 38px 24px;
+  h2 {
+    margin-bottom: 1rem;
+  }
+  span {
+    display: none;
+  }
   > p {
     text-decoration: underline;
     text-underline-offset: 5px;
@@ -75,7 +86,7 @@ span {
   padding: 0 24px;
   p {
     cursor: pointer;
-    color: #000000;
+    color: $black;
   }
 }
 .item {
@@ -98,14 +109,14 @@ span {
   }
 }
 .color.active {
-  border: 1px solid black;
+  border: 1px solid $black;
   padding: 2px;
   background-clip: content-box;
   width: 6px;
   height: 6px;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: $breakpoint) {
   main {
     display: flex;
   }
@@ -115,6 +126,9 @@ span {
   }
   .header {
     padding: 96px 24px 74px 120px;
+    span {
+      display: unset;
+    }
   }
   .bg-container {
     width: 50vw;
@@ -138,16 +152,16 @@ span {
   }
   .header {
     * {
-      color: black;
+      color: $black;
     }
     h2 {
       margin-bottom: 12px;
     }
     span {
-      color: #666666;
+      color: $gray;
     }
     p {
-      margin-top: 32px;
+      margin-top: 2rem;
     }
   }
 }
