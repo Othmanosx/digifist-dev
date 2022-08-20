@@ -1,0 +1,153 @@
+@font-face {
+  font-family: Avenir;
+  src: url(./assets/Avenir.ttc);
+}
+@font-face {
+  font-family: "ITC Avant Garde Gothic Pro Bk";
+  src: url(./assets/ITCAvantGardePro-Bk.otf);
+}
+@font-face {
+  font-family: "ITC Avant Garde Gothic Pro Bold";
+  src: url(./assets/ITCAvantGardePro-Bold.otf);
+}
+@font-face {
+  font-family: "ITC Avant Garde Gothic Pro Demi";
+  src: url(./assets/ITCAvantGardePro-Demi.otf);
+}
+@font-face {
+  font-family: "ITC Avant Garde Gothic Pro Md";
+  src: url(./assets/ITCAvantGardePro-Md.otf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "ITC Avant Garde Gothic Pro Bold";
+  color: white;
+}
+p,
+span {
+  font-family: "Avenir";
+  font-size: 0.8rem;
+  color: white;
+}
+.bg-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.bg-image {
+  height: 100%;
+  width: 100%;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  bottom: 4px;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 78.65%);
+}
+.items-container {
+  margin-top: -270px;
+}
+.header {
+  padding: 16px 24px;
+  > p {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    cursor: pointer;
+  }
+}
+
+.items-list {
+  display: flex;
+  overflow-y: scroll;
+  gap: 12px;
+  padding: 0 24px;
+  p {
+    cursor: pointer;
+    color: #000000;
+  }
+}
+.item {
+  min-width: 40vw;
+  margin-bottom: 1rem;
+  img {
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+  }
+}
+.colors {
+  display: flex;
+  gap: 6px;
+  .color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+.color.active {
+  border: 1px solid black;
+  padding: 2px;
+  background-clip: content-box;
+  width: 6px;
+  height: 6px;
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    display: flex;
+  }
+  .items-container {
+    max-width: 50vw;
+    margin-top: 0;
+  }
+  .header {
+    padding: 96px 24px 74px 120px;
+  }
+  .bg-container {
+    width: 50vw;
+    height: 100vh;
+    position: unset;
+  }
+  .bg-image {
+    width: 100%;
+    height: 100%;
+  }
+  .overlay {
+    display: none;
+  }
+  .items-list {
+    padding: 0px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  .item {
+    min-width: 52%;
+  }
+  .header {
+    * {
+      color: black;
+    }
+    h2 {
+      margin-bottom: 12px;
+    }
+    span {
+      color: #666666;
+    }
+    p {
+      margin-top: 32px;
+    }
+  }
+}
