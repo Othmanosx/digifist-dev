@@ -1,7 +1,7 @@
 export const items = [
   {
     id: 1,
-    title: "365 Signature Hoodie",
+    title: "Organic Skinny High Waist Raw Hem Jeans",
     price: "€33.95",
     image: "/bg3.png",
     colors: ["#99C3CC", "#CC9999", "#CB99CC", "#BCD9B2"],
