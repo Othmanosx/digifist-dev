@@ -121,6 +121,9 @@ span {
   width: 6px;
   height: 6px;
 }
+.arrow {
+  display: none;
+}
 
 @media screen and (min-width: $breakpoint) {
   main {
@@ -150,14 +153,25 @@ span {
   .overlay {
     display: none;
   }
+  .list-container {
+    position: relative;
+  }
   .items-list {
     padding: 0px;
     padding-left: 120px;
     padding-right: 120px;
     gap: 2rem;
+    position: relative;
   }
   .item {
     min-width: 52%;
+  }
+  .arrow {
+    display: block;
+    position: absolute;
+    top: calc(35% - 1rem);
+    right: 48px;
+    cursor: pointer;
   }
   .details {
     display: flex;
